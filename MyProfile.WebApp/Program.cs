@@ -5,8 +5,10 @@ using MyProfile.WebApp;
 using Blazorise;
 using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
+using Microsoft.AspNetCore.Components;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
@@ -19,4 +21,7 @@ builder.Services
     .AddBootstrap5Providers()
     .AddFontAwesomeIcons();
 
-await builder.Build().RunAsync();
+var app = builder.Build();
+var navManager = app.Services.GetService<NavigationManager>();
+
+await app.RunAsync();
