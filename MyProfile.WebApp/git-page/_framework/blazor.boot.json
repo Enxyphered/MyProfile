@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MyProfile.WebApp",
   "resources": {
-    "hash": "sha256-i/IVbH01UIXUkW+Rknhj2q7QpEgJFuhuBKq+K0xb4qE=",
+    "hash": "sha256-3JclVkby2qJK0FSjOeL9qVK0O3S1fMjIdAOd+bWTTeQ=",
     "fingerprinting": {
       "Blazorise.3cok79vbey.wasm": "Blazorise.wasm",
       "Blazorise.Bootstrap5.jls7s8pej1.wasm": "Blazorise.Bootstrap5.wasm",
@@ -55,7 +55,7 @@
       "System.Threading.hz8krii9ny.wasm": "System.Threading.wasm",
       "System.ezrw3d5kw2.wasm": "System.wasm",
       "System.Private.CoreLib.h4ztuqcceb.wasm": "System.Private.CoreLib.wasm",
-      "MyProfile.WebApp.0frze7u0oo.wasm": "MyProfile.WebApp.wasm",
+      "MyProfile.WebApp.9k7h0n4o9b.wasm": "MyProfile.WebApp.wasm",
       "dotnet.native.u3z8ifp86u.js": "dotnet.native.js",
       "dotnet.native.cia4ttt4m9.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -133,7 +133,7 @@
       "System.Text.RegularExpressions.0x6ue5fj39.wasm": "sha256-hDA5//Aua0shoGCn9jy4kMFpg6MYPn8Jpwd8wMXM7u8=",
       "System.Threading.hz8krii9ny.wasm": "sha256-g7KvujVJtij6ZynncT2wNhYygZMor7IvOla3dS9pZwc=",
       "System.ezrw3d5kw2.wasm": "sha256-ViNRvhyxlTugIlqJHamw/HwbXlg/YWcrANmxuTM0tfg=",
-      "MyProfile.WebApp.0frze7u0oo.wasm": "sha256-jJ/GpECA8xsm21XWOninpEWoxu7bJRTkhoy4kAXKdhA="
+      "MyProfile.WebApp.9k7h0n4o9b.wasm": "sha256-d8M3j9Jb0Gv9Zz6jGhF9GSbpqGEEaW1KzIJR+JhY96g="
     }
   },
   "cacheBootResources": true,
