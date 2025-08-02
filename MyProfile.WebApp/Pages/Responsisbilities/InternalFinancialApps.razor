@@ -1,0 +1,37 @@
+﻿@page "/responsibilities/internal-apps"
+
+<PageTitle>Internal Applications</PageTitle>
+
+<div class="fluid-container">
+    <h1 class="small text-center mt-5">Internal Applications</h1>
+    <div class="img-grid-2">
+        <img class="img-fluid align-self-center" style="max-height:100px; width:auto;" src="imgs\MS-SQL-Logo.png" />
+        <img class="img-fluid align-self-center" style="max-height:100px; width:auto;" src="imgs\DotNET-Logo.png" />
+    </div>
+
+    <h2 class="thick mt-5">Deliver</h2>
+    <h2 class="thick">Order Tracker</h2>
+    <h2 class="thin">......................</h2>    
+    <p class="thin ms-5" style="text-indent: 2em;">
+        We provide hardware repair and maintainance support for our customers. This meant that we had to get signatures on deliver orders as proof of handover.
+    </p>
+    <p class="thin ms-5" style="text-indent: 2em;">
+        The application created the PDF to be printed and signed. We created "Delivery Order Tracker" using WPF and SQL Server 
+        that was hosted on internally managed servers. This application did not use a web API however was authenticated using the SQL Server user authentication.
+        We did concider using a ZeroTier network to allow connection to the server on authenticated computers 
+        however decided it was not necessary as all the hardware was being handed off from the office.
+    </p>
+
+    <h2 class="thick mt-5">Financial Manager</h2>
+    <h2 class="thin">............................</h2>
+    <p class="thin ms-5" style="text-indent: 2em;">
+        We created internal expense tracker that is used to create PDF's expense forms that can be signed and tracked.
+        It used the same technology stacks as previous application as they had very similar use cases.
+    </p>
+    <div style="margin-bottom:7rem;" />
+</div>
+
+@code
+{
+    public static string Route => "/responsibilities/internal-apps";
+}

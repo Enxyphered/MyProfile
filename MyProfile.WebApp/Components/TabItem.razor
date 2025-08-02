@@ -1,0 +1,70 @@
+﻿@inject NavigationManager Navigation
+
+<div @onmouseover="MouseOver" @onmouseout="MouseOut" @onclick="MouseClick" class ="@TabClass" data-float-up><p class="thick d-inline">@Header</p><p class="@_thinOrThick d-inline" style="cursor:default;">@ChildContent</p></div>
+
+@code {
+    [Parameter]
+    public int TabValue { get; set; } = 1;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string TabHeader { get; set; } = "";
+
+    [Parameter]
+    public string Href { get; set; } = "#";
+
+    public string TabClass
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(TabHeader))
+                return string.Empty;
+            if (TabValue == 1)
+                return "tab";
+            return $"tab-{TabValue}";
+        }
+    }
+
+    public string Header
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(TabHeader))
+                return TabHeader;
+            if (TabValue == 1)
+                return "> ";
+            return ". ";
+        }
+    }
+
+    private string _thinOrThick = "thin";
+
+    public void MouseClick()
+    {
+        if(Href == "#")
+            return;
+        Navigation.NavigateTo(Href);
+    }
+
+    public void MouseOver()
+    {
+        if (Href == "#")
+            return;
+        if (Href == "#" && !string.IsNullOrWhiteSpace(TabHeader))
+            return;
+        _thinOrThick = "thick mx-0";
+        StateHasChanged();
+    }
+
+    public void MouseOut()
+    {
+        if (Href == "#")
+            return;
+        if (Href == "#" && !string.IsNullOrWhiteSpace(TabHeader))
+            return;
+        _thinOrThick = "thin";
+        StateHasChanged();
+    }
+}
