@@ -10,7 +10,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://Enxyphered.github.io/MyProfile/") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://enxyphered.github.io/MyProfile/") });
 builder.Services
     .AddBlazorise(options =>
     {
