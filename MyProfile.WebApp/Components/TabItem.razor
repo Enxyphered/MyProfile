@@ -1,6 +1,6 @@
 ﻿@inject NavigationManager Navigation
 
-<div @onmouseover="MouseOver" @onmouseout="MouseOut" @onclick="MouseClick" class ="@TabClass" data-float-up><p class="thick d-inline">@Header</p><p class="@_thinOrThick d-inline" style="cursor:default;">@ChildContent</p></div>
+<div @onmouseover="MouseOver" @onmouseout="MouseOut" @onclick="MouseClick" class ="@TabClass" data-float-up><p class="thick d-inline">@Header</p><p class="@_textCssClass d-inline" style="cursor:default;">@ChildContent</p></div>
 
 @code {
     [Parameter]
@@ -14,6 +14,14 @@
 
     [Parameter]
     public string Href { get; set; } = "#";
+
+    private string _textCssClass = "thin";
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MouseOut();
+    }
 
     public string TabClass
     {
@@ -39,8 +47,6 @@
         }
     }
 
-    private string _thinOrThick = "thin";
-
     public void MouseClick()
     {
         if(Href == "#")
@@ -54,7 +60,11 @@
             return;
         if (Href == "#" && !string.IsNullOrWhiteSpace(TabHeader))
             return;
-        _thinOrThick = "thick mx-0";
+        if(Href != "#")
+            _textCssClass = "thick text-info opacity-25 mx-0";
+        else
+            _textCssClass = "thick mx-0";
+
         StateHasChanged();
     }
 
@@ -64,7 +74,11 @@
             return;
         if (Href == "#" && !string.IsNullOrWhiteSpace(TabHeader))
             return;
-        _thinOrThick = "thin";
+
+        if (Href != "#")
+            _textCssClass = "thin text-info";
+        else
+            _textCssClass = "thin";
         StateHasChanged();
     }
 }

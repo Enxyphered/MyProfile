@@ -13,4 +13,38 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.5" PrivateAssets="all" />
   </ItemGroup>
 
+  <!--Custom Build Script to update index.html with base href tags-->
+  <Target Name="SetBaseHref" BeforeTargets="GenerateBuildWebHost" Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release'">
+    <ReadLinesFromFile File="wwwroot/index.template.html">
+      <Output TaskParameter="Lines" ItemName="IndexTemplate" />
+    </ReadLinesFromFile>
+
+    <WriteLinesToFile
+      File="wwwroot/index.html"
+      Lines="@(IndexTemplate->Replace('__BASE_HREF__', '$(BaseHref)'))"
+      Overwrite="true" />
+  </Target>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <BaseHref>/</BaseHref>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <BaseHref>/MyProfile/</BaseHref>
+  </PropertyGroup>
+  <!--{##########################################################}-->
+
+  <!--Custom Build Script to copy published files to git-pages automatically on successful publishes-->
+  <Target Name="CopyPublishedFiles" AfterTargets="Publish">
+    <ItemGroup>
+      <PublishedFiles Include="$(PublishDir)wwwroot\**\*" />
+    </ItemGroup>
+    <Copy
+      SourceFiles="@(PublishedFiles)"
+      DestinationFiles="@(PublishedFiles->'$(ProjectDir)git-page\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="false"
+      OverwriteReadOnlyFiles="true" />
+  </Target>
+  <!--{############################################################################################}-->
+
 </Project>
