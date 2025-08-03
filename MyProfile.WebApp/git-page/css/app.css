@@ -5,6 +5,7 @@ body {
     color: #f8f9fa;
     margin: 0;
     min-height: 100vh;
+    min-width: 400px;
 }
 
 /*...Font & Typography...*/
@@ -215,10 +216,14 @@ p.thin {
     .img-grid {
         justify-content: center;
         grid-template-columns: 1fr;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .img-grid-2 {
         justify-content: center;
         grid-template-columns: 1fr;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
