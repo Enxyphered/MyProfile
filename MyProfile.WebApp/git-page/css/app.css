@@ -28,7 +28,7 @@ h2.thick {
     font-family: 'Bitcount Prop Single', sans-serif;
     font-weight: 300;
     font-size: 2.7rem;
-    margin-left: 0.8rem;
+    margin-left: 0.5rem;
     color: var(--bs-gray-400);
 }
 
@@ -37,20 +37,21 @@ h2.thin {
     font-weight: 100;
     font-size: 2.7rem;
     margin-top: -3rem;
-    margin-left: 0.8rem;
+    margin-left: 0.5rem;
     color: var(--bs-gray-400);
 }
 
 p.thick {
     font-family: 'Poppins', serif;
     font-size: 1rem;
-    margin-left: 0.8rem;
+    margin-left: 0.5rem;
 }
 
 p.thin {
     font-family: 'Poppins', serif;
     font-size: 1rem;
     font-weight: 100;
+    margin-left: 0.5rem;
 }
 
 @media (min-width: 630px) {
@@ -90,6 +91,7 @@ p.thin {
         font-family: 'Poppins', serif;
         font-size: 1.25rem;
         font-weight: 100;
+        margin-left: 3rem;
     }
 }
 
@@ -130,17 +132,18 @@ p.thin {
         font-family: 'Poppins', serif;
         font-size: 1.5rem;
         font-weight: 100;
+        margin-left: 3rem;
     }
 }
 
 /*...Layouts & Containers...*/
 
 .tab {
-    margin-left: 2rem;
+    margin-left: 1.25rem;
 }
 
 .tab-2 {
-    margin-left: 3rem;
+    margin-left: 2.25rem;
 }
 
 .img-container {
