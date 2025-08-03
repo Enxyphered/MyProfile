@@ -29,7 +29,8 @@ h2.thick {
     font-family: 'Bitcount Prop Single', sans-serif;
     font-weight: 300;
     font-size: 2.7rem;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     color: var(--bs-gray-400);
 }
 
@@ -38,7 +39,8 @@ h2.thin {
     font-weight: 100;
     font-size: 2.7rem;
     margin-top: -3rem;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     color: var(--bs-gray-400);
 }
 
@@ -46,6 +48,7 @@ p.thick {
     font-family: 'Poppins', serif;
     font-size: 1rem;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 p.thin {
@@ -53,6 +56,7 @@ p.thin {
     font-size: 1rem;
     font-weight: 100;
     margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 @media (min-width: 630px) {
