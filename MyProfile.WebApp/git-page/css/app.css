@@ -17,17 +17,17 @@ h1:focus {
 
 h1 {
     font-family: 'Bitcount Prop Single', sans-serif;
-    font-size: 7rem;
+    font-size: 6.5rem;
 }
 
 h1.small {
-    font-size: 4rem;
+    font-size: 2.7rem;
 }
 
 h2.thick {
     font-family: 'Bitcount Prop Single', sans-serif;
     font-weight: 300;
-    font-size: 3.75rem;
+    font-size: 2.7rem;
     margin-left: 0.8rem;
     color: var(--bs-gray-400);
 }
@@ -35,7 +35,7 @@ h2.thick {
 h2.thin {
     font-family: 'Bitcount Prop Single', sans-serif;
     font-weight: 100;
-    font-size: 3.75rem;
+    font-size: 2.7rem;
     margin-top: -3rem;
     margin-left: 0.8rem;
     color: var(--bs-gray-400);
@@ -43,13 +43,13 @@ h2.thin {
 
 p.thick {
     font-family: 'Poppins', serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-left: 0.8rem;
 }
 
 p.thin {
     font-family: 'Poppins', serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 100;
 }
 
